@@ -73,20 +73,86 @@
 # my_book = Book("2024", "George Orwell", 2003)
 # print(f"Book: {my_book.title}, Year: {my_book.get_age()} yil")
 
-class Book:
-    def __init__(self, title, author, year, page_count):
-        self.title = title
-        self.author = author
-        self.year = year
-        self,page_count = page_count
+# class Book:
+#     def __init__(self, title, author, year, page_count):
+#         self.title = title
+#         self.author = author
+#         self.year = year
+#         self,page_count = page_count
 
 
-class Ebook(Book):
-    def __init__(self, file_size):
-        super().__init__(title, author, year, page_count)
-        self.file_size = file_size
+# class Ebook(Book):
+#     def __init__(self, file_size):
+#         super().__init__(title, author, year, page_count)
+#         self.file_size = file_size
 
-    def charge(self):
-        print(f" File size: {self.file_size} 128")
+#     def charge(self):
+#         print(f" File size: {self.file_size} 128")
 
-Flowers = Ebook("Fig flowers", "Louis", 2023, 128)
+# Flowers = Ebook("Fig flowers", "Louis", 2023, 128)
+
+
+# 4
+# class BankAccount:
+#     def __init__(self, balance):
+#         self.__balance = balance  
+
+#     def deposit(self, amount):
+#         if amount > 0:
+#             self.__balance += amount
+#             print(f"{amount} deposited. New balance: {self.__balance}")
+#         else:
+#             print("Invalid deposit amount")
+
+#     def withdraw(self, amount):
+#         if amount <= self.__balance:
+#             self.__balance -= amount
+#             print(f"{amount} withdrawn. New balance: {self.__balance}")
+#         else:
+#             print("Insufficient funds")
+#     def get_balance(self):
+#         return self.__balance
+
+# deposit = BankAccount(1000)
+# deposit.deposit(500)
+# print("Balance:", deposit.get_balance())
+
+
+
+# 5
+# class Book:
+#     def __init__(self, title):
+#         self.title = title
+# class Author:
+#     def __init__(self,name):
+#         self.name = name
+#         self.books = []
+#     def add_book(self, title):
+#         book = Book(title)
+#         self.books.append(book)
+#     def get_books(self):
+#         return [book.title for book in self.books]
+
+# author = Author("John Doe")
+# author.add_book("Book One")
+# author.add_book("Book Two")
+# print(author.name)
+# print(author.get_books())
+
+
+
+# 6
+class Library:
+    def __init__(self, name, books):
+        self.name = name
+        self.books = books
+    def add_book(self, name, books):
+        book = books(name)
+        self.books.append(book)
+        print(f"add_book")
+    def remove_book(self, name, books):
+        book = books(name)
+        self.books.remove(book)
+        print(f"remove_book")
+    def get_book(self):
+        return [self.books]
